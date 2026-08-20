@@ -1,0 +1,2784 @@
+/* =========================================================
+   BASIC SETTINGS
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Inter', sans-serif;
+
+    color: #e8eef5;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(0, 212, 255, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(124, 58, 237, 0.10),
+            transparent 30%
+        ),
+        #07131a;
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND GRID
+   ========================================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 48px 48px;
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+h1 {
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 55px auto 65px;
+
+    text-align: center;
+
+    font-size: 5rem;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+
+    color: white;
+
+    text-shadow:
+        0 0 20px rgba(0,212,255,0.25),
+        0 0 45px rgba(124,58,237,0.15);
+}
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+
+    height: 4px;
+
+    margin: 20px auto 0;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00d4ff,
+            #7c3aed
+        );
+}
+
+
+/* =========================================================
+   REMOVE LI BULLETS
+   ========================================================= */
+
+li {
+    list-style: none;
+}
+
+li::marker {
+    content: "";
+}
+
+
+/* =========================================================
+   COMMON CODE STYLE
+   ========================================================= */
+
+code {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    margin-left: 4px;
+
+    border-radius: 7px;
+
+    font-family: 'JetBrains Mono', monospace;
+
+    font-size: 0.88rem;
+
+    color: #6ee7b7;
+
+    background: #061017;
+
+    border: 1px solid rgba(0,212,255,0.12);
+}
+
+
+/* =========================================================
+   TAG 1 - DOCTYPE
+   ========================================================= */
+
+.Tag-1 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24,40,48,0.85),
+            rgba(14,27,34,0.82)
+        );
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-1-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20,35,43,0.80),
+            rgba(12,25,32,0.82)
+        );
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-1-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #00d4ff,
+            #7c3aed
+        );
+}
+
+
+/* =========================================================
+   TAG 2 - HTML
+   ========================================================= */
+
+.Tag-2 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24,40,48,0.85),
+            rgba(14,27,34,0.82)
+        );
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-2-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-2-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            #00d4ff,
+            #7c3aed
+        );
+}
+
+
+/* =========================================================
+   TAG 3 - HEAD
+   ========================================================= */
+
+.Tag-3 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-3-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-3-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 4 - TITLE
+   ========================================================= */
+
+.Tag-4 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-4-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-4-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 5 - BODY
+   ========================================================= */
+
+.Tag-5 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-5-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-5-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 6 - HEADING TAGS
+   ========================================================= */
+
+.Tag-6 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-6-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-6-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 7 - PARAGRAPH
+   ========================================================= */
+
+.Tag-7 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-7-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-7-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 8 - BR
+   ========================================================= */
+
+.Tag-8 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-8-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-8-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 9 - HR
+   ========================================================= */
+
+.Tag-9 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-9-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-9-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 10 - HYPERLINK
+   ========================================================= */
+
+.Tag-10 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-10-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-10-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 11 - IMAGE
+   ========================================================= */
+
+.Tag-11 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-11-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-11-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 12 - UL
+   ========================================================= */
+
+.Tag-12 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-12-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-12-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 13 - OL
+   ========================================================= */
+
+.Tag-13 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-13-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-13-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 14 - LI
+   ========================================================= */
+
+.Tag-14 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-14-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-14-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 15 - TABLE
+   ========================================================= */
+
+.Tag-15 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-15-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-15-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 16 - TR
+   ========================================================= */
+
+.Tag-16 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-16-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-16-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 17 - TD
+   ========================================================= */
+
+.Tag-17 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-17-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-17-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 18 - TH
+   ========================================================= */
+
+.Tag-18 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-18-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-18-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 19 - FORM
+   ========================================================= */
+
+.Tag-19 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-19-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-19-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 20 - INPUT
+   ========================================================= */
+
+.Tag-20 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-20-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-20-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 21 - LABEL
+   ========================================================= */
+
+.Tag-21 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-21-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-21-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 22 - BUTTON
+   ========================================================= */
+
+.Tag-22 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-22-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-22-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 23 - TEXTAREA
+   ========================================================= */
+
+.Tag-23 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-23-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-23-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 24 - SELECT
+   ========================================================= */
+
+.Tag-24 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-24-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-24-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 25 - OPTION
+   ========================================================= */
+
+.Tag-25 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-25-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-25-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 26 - BOLD
+   ========================================================= */
+
+.Tag-26 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-26-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-26-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 27 - STRONG
+   ========================================================= */
+
+.Tag-27 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-27-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-27-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 28 - ITALIC
+   ========================================================= */
+
+.Tag-28 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-28-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-28-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 29 - UNDERLINE
+   ========================================================= */
+
+.Tag-29 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-29-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-29-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 30 - MARK
+   ========================================================= */
+
+.Tag-30 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-30-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-30-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 31 - SUBSCRIPT
+   ========================================================= */
+
+.Tag-31 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-31-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-31-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 32 - SUPERSCRIPT
+   ========================================================= */
+
+.Tag-32 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-32-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-32-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 33 - DIVISION
+   ========================================================= */
+
+.Tag-33 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-33-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-33-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   TAG 34 - SPAN
+   ========================================================= */
+
+.Tag-34 {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto;
+
+    padding: 19px 34px;
+
+    background: rgba(24,40,48,0.85);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 18px;
+
+    color: white;
+
+    font-size: 1.18rem;
+
+    font-weight: 700;
+}
+
+.Tag-34-Para {
+    display: block;
+
+    width: 1100px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 38px;
+
+    padding: 31px 43px;
+
+    background: rgba(20,35,43,0.80);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 0 0 18px 18px;
+
+    color: #aebdce;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    position: relative;
+}
+
+.Tag-34-Para::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: linear-gradient(#00d4ff,#7c3aed);
+}
+
+
+/* =========================================================
+   HOVER EFFECTS FOR EACH TAG
+   ========================================================= */
+
+.Tag-1:hover,
+.Tag-2:hover,
+.Tag-3:hover,
+.Tag-4:hover,
+.Tag-5:hover,
+.Tag-6:hover,
+.Tag-7:hover,
+.Tag-8:hover,
+.Tag-9:hover,
+.Tag-10:hover,
+.Tag-11:hover,
+.Tag-12:hover,
+.Tag-13:hover,
+.Tag-14:hover,
+.Tag-15:hover,
+.Tag-16:hover,
+.Tag-17:hover,
+.Tag-18:hover,
+.Tag-19:hover,
+.Tag-20:hover,
+.Tag-21:hover,
+.Tag-22:hover,
+.Tag-23:hover,
+.Tag-24:hover,
+.Tag-25:hover,
+.Tag-26:hover,
+.Tag-27:hover,
+.Tag-28:hover,
+.Tag-29:hover,
+.Tag-30:hover,
+.Tag-31:hover,
+.Tag-32:hover,
+.Tag-33:hover,
+.Tag-34:hover {
+
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(0,212,255,0.30);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.30);
+}
+
+
+/* =========================================================
+   CONTENT HOVER
+   ========================================================= */
+
+.Tag-1-Para:hover,
+.Tag-2-Para:hover,
+.Tag-3-Para:hover,
+.Tag-4-Para:hover,
+.Tag-5-Para:hover,
+.Tag-6-Para:hover,
+.Tag-7-Para:hover,
+.Tag-8-Para:hover,
+.Tag-9-Para:hover,
+.Tag-10-Para:hover,
+.Tag-11-Para:hover,
+.Tag-12-Para:hover,
+.Tag-13-Para:hover,
+.Tag-14-Para:hover,
+.Tag-15-Para:hover,
+.Tag-16-Para:hover,
+.Tag-17-Para:hover,
+.Tag-18-Para:hover,
+.Tag-19-Para:hover,
+.Tag-20-Para:hover,
+.Tag-21-Para:hover,
+.Tag-22-Para:hover,
+.Tag-23-Para:hover,
+.Tag-24-Para:hover,
+.Tag-25-Para:hover,
+.Tag-26-Para:hover,
+.Tag-27-Para:hover,
+.Tag-28-Para:hover,
+.Tag-29-Para:hover,
+.Tag-30-Para:hover,
+.Tag-31-Para:hover,
+.Tag-32-Para:hover,
+.Tag-33-Para:hover,
+.Tag-34-Para:hover {
+
+    border-color:
+        rgba(0,212,255,0.25);
+
+    background:
+        rgba(23,42,52,0.90);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #04090d;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            #00d4ff,
+            #7c3aed
+        );
+
+    border-radius: 50px;
+
+    border: 2px solid #04090d;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    h1 {
+        font-size: 3rem;
+
+        letter-spacing: -2px;
+    }
+
+    .Tag-1,
+    .Tag-2,
+    .Tag-3,
+    .Tag-4,
+    .Tag-5,
+    .Tag-6,
+    .Tag-7,
+    .Tag-8,
+    .Tag-9,
+    .Tag-10,
+    .Tag-11,
+    .Tag-12,
+    .Tag-13,
+    .Tag-14,
+    .Tag-15,
+    .Tag-16,
+    .Tag-17,
+    .Tag-18,
+    .Tag-19,
+    .Tag-20,
+    .Tag-21,
+    .Tag-22,
+    .Tag-23,
+    .Tag-24,
+    .Tag-25,
+    .Tag-26,
+    .Tag-27,
+    .Tag-28,
+    .Tag-29,
+    .Tag-30,
+    .Tag-31,
+    .Tag-32,
+    .Tag-33,
+    .Tag-34 {
+
+        width: calc(100% - 30px);
+
+        padding: 17px 24px;
+
+        font-size: 1.05rem;
+    }
+
+
+    .Tag-1-Para,
+    .Tag-2-Para,
+    .Tag-3-Para,
+    .Tag-4-Para,
+    .Tag-5-Para,
+    .Tag-6-Para,
+    .Tag-7-Para,
+    .Tag-8-Para,
+    .Tag-9-Para,
+    .Tag-10-Para,
+    .Tag-11-Para,
+    .Tag-12-Para,
+    .Tag-13-Para,
+    .Tag-14-Para,
+    .Tag-15-Para,
+    .Tag-16-Para,
+    .Tag-17-Para,
+    .Tag-18-Para,
+    .Tag-19-Para,
+    .Tag-20-Para,
+    .Tag-21-Para,
+    .Tag-22-Para,
+    .Tag-23-Para,
+    .Tag-24-Para,
+    .Tag-25-Para,
+    .Tag-26-Para,
+    .Tag-27-Para,
+    .Tag-28-Para,
+    .Tag-29-Para,
+    .Tag-30-Para,
+    .Tag-31-Para,
+    .Tag-32-Para,
+    .Tag-33-Para,
+    .Tag-34-Para {
+
+        width: calc(100% - 30px);
+
+        padding: 25px 30px;
+
+        font-size: 0.9rem;
+    }
+
+
+    code {
+        font-size: 0.72rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .Tag-1,
+    .Tag-2,
+    .Tag-3,
+    .Tag-4,
+    .Tag-5,
+    .Tag-6,
+    .Tag-7,
+    .Tag-8,
+    .Tag-9,
+    .Tag-10,
+    .Tag-11,
+    .Tag-12,
+    .Tag-13,
+    .Tag-14,
+    .Tag-15,
+    .Tag-16,
+    .Tag-17,
+    .Tag-18,
+    .Tag-19,
+    .Tag-20,
+    .Tag-21,
+    .Tag-22,
+    .Tag-23,
+    .Tag-24,
+    .Tag-25,
+    .Tag-26,
+    .Tag-27,
+    .Tag-28,
+    .Tag-29,
+    .Tag-30,
+    .Tag-31,
+    .Tag-32,
+    .Tag-33,
+    .Tag-34 {
+
+        width: calc(100% - 20px);
+
+        padding: 15px 20px;
+    }
+
+
+    .Tag-1-Para,
+    .Tag-2-Para,
+    .Tag-3-Para,
+    .Tag-4-Para,
+    .Tag-5-Para,
+    .Tag-6-Para,
+    .Tag-7-Para,
+    .Tag-8-Para,
+    .Tag-9-Para,
+    .Tag-10-Para,
+    .Tag-11-Para,
+    .Tag-12-Para,
+    .Tag-13-Para,
+    .Tag-14-Para,
+    .Tag-15-Para,
+    .Tag-16-Para,
+    .Tag-17-Para,
+    .Tag-18-Para,
+    .Tag-19-Para,
+    .Tag-20-Para,
+    .Tag-21-Para,
+    .Tag-22-Para,
+    .Tag-23-Para,
+    .Tag-24-Para,
+    .Tag-25-Para,
+    .Tag-26-Para,
+    .Tag-27-Para,
+    .Tag-28-Para,
+    .Tag-29-Para,
+    .Tag-30-Para,
+    .Tag-31-Para,
+    .Tag-32-Para,
+    .Tag-33-Para,
+    .Tag-34-Para {
+
+        width: calc(100% - 20px);
+
+        padding: 22px 25px;
+
+        font-size: 0.84rem;
+    }
+}
